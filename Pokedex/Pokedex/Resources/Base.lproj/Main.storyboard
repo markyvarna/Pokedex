@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pQg-cD-SKd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon-->
+        <scene sceneID="bY6-2S-HqX">
+            <objects>
+                <viewController id="TvU-GI-5N4" customClass="PokemonViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cuJ-xA-9xL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="Gho-bJ-t8s">
+                                <rect key="frame" x="0.0" y="126.5" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="4R5-Nk-7ET"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vTA-0t-tMg">
+                                <rect key="frame" x="0.0" y="182.5" width="375" height="484.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f9b-19-xUn">
+                                        <rect key="frame" x="162.5" y="0.0" width="50" height="156"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQ5-Bk-dsP">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="78"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcu-71-LWj">
+                                                <rect key="frame" x="0.0" y="78" width="50" height="78"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokemonBall" translatesAutoresizingMaskIntoConstraints="NO" id="iug-0k-J5i">
+                                        <rect key="frame" x="109.5" y="164" width="156" height="156.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="iug-0k-J5i" secondAttribute="height" multiplier="1:1" id="GYf-tM-bhv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4k-FY-LAN">
+                                        <rect key="frame" x="187.5" y="328.5" width="0.0" height="156"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gho-bJ-t8s" firstAttribute="leading" secondItem="sC8-C4-fKn" secondAttribute="leading" id="7Yo-0Q-uN1"/>
+                            <constraint firstItem="vTA-0t-tMg" firstAttribute="leading" secondItem="sC8-C4-fKn" secondAttribute="leading" id="9Sz-ls-P6P"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="vTA-0t-tMg" secondAttribute="bottom" id="Biz-f8-weh"/>
+                            <constraint firstItem="sC8-C4-fKn" firstAttribute="trailing" secondItem="vTA-0t-tMg" secondAttribute="trailing" id="Je9-2V-PeP"/>
+                            <constraint firstItem="vTA-0t-tMg" firstAttribute="centerX" secondItem="cuJ-xA-9xL" secondAttribute="centerX" id="JxW-aj-UOG"/>
+                            <constraint firstItem="Gho-bJ-t8s" firstAttribute="top" secondItem="sC8-C4-fKn" secondAttribute="top" id="RDZ-Xz-VxQ"/>
+                            <constraint firstItem="Gho-bJ-t8s" firstAttribute="trailing" secondItem="sC8-C4-fKn" secondAttribute="trailing" id="lUD-KH-hML"/>
+                            <constraint firstItem="vTA-0t-tMg" firstAttribute="top" secondItem="Gho-bJ-t8s" secondAttribute="bottom" id="nlD-q2-2Mf"/>
+                            <constraint firstItem="Gho-bJ-t8s" firstAttribute="centerX" secondItem="cuJ-xA-9xL" secondAttribute="centerX" id="oN3-Eh-TDd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sC8-C4-fKn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pokemon" id="hHZ-zd-ryp"/>
+                    <connections>
+                        <outlet property="abilitiesLabel" destination="h4k-FY-LAN" id="FTO-1v-NfX"/>
+                        <outlet property="idLabel" destination="Qcu-71-LWj" id="FYE-2E-iGc"/>
+                        <outlet property="nameLabel" destination="zQ5-Bk-dsP" id="kzt-zz-hdS"/>
+                        <outlet property="pokemonImageView" destination="iug-0k-J5i" id="61R-CG-LKy"/>
+                        <outlet property="searchBar" destination="Gho-bJ-t8s" id="vW6-Oc-ASN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iwx-Gb-14M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192.8" y="125.4872563718141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yGV-XI-Anu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pQg-cD-SKd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="1zP-Ru-qD0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="106.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="41"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TvU-GI-5N4" kind="relationship" relationship="rootViewController" id="qjB-ce-X8d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ugh-jh-Ld3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.59999999999999" y="125.4872563718141"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pokemonBall" width="360" height="360"/>
+    </resources>
+</document>
